@@ -2,8 +2,10 @@ package com.cibertec.cibertecapp.news
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.ViewPager2
 import com.cibertec.cibertecapp.R
 
 class NewsActivity : AppCompatActivity() {
@@ -49,7 +51,7 @@ class NewsActivity : AppCompatActivity() {
                 "Todos los egresdos tienen trabajo"))
 
         adapter.setNews(newsList)
-        recyclerNews.layoutManager =
-            LinearLayoutManager(this)
+        // recyclerNews.layoutManager = LinearLayoutManager(this)
+        recyclerNews.layoutManager = GridLayoutManager(this, 3)
     }
 }
