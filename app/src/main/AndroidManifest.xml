@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CibertecApp">
         <activity
-            android:name=".NewsActivity"
+            android:name=".news.NewsActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"

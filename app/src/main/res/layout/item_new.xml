@@ -14,12 +14,14 @@
         android:layout_margin="10dp">
 
         <ImageView
+            android:id="@+id/imgPortada"
             android:layout_width="match_parent"
             android:layout_height="180dp"
             android:scaleType="centerCrop"
             android:src="@drawable/noticia1"/>
 
         <TextView
+            android:id="@+id/textTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20sp"
@@ -28,6 +30,7 @@
             android:text="Cibertec firma convenio con una empresa"/>
 
         <TextView
+            android:id="@+id/textDescripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLines="3"

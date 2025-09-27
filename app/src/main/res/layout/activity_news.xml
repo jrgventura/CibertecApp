@@ -5,11 +5,13 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewsActivity">
+    tools:context=".news.NewsActivity">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerNews"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
         tools:listitem="@layout/item_new"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
