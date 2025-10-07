@@ -17,7 +17,7 @@
             android:name=".news.NewsActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".note.NoteActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
