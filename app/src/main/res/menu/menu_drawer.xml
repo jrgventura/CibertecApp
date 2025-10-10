@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/itemNotes"
+        android:icon="@drawable/baseline_newspaper_24"
+        android:title="Notas" />
+
+    <item
+        android:id="@+id/itemBooks"
+        android:icon="@drawable/baseline_newspaper_24"
+        android:title="Libros" />
+
+    <item
+        android:id="@+id/file"
+        android:title="Ajustes">
+        <menu>
+            <item
+                android:id="@+id/itemNotification"
+                android:icon="@drawable/baseline_newspaper_24"
+                android:title="Notificaciones" />
+        </menu>
+    </item>
+
+</menu>
