@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.cibertec.cibertecapp.MainActivity
 import com.cibertec.cibertecapp.R
 import com.cibertec.cibertecapp.news.NewsActivity
+import com.cibertec.cibertecapp.register.RegisterActivity
 
 class LoginActivity: AppCompatActivity() {
 
@@ -46,8 +47,19 @@ class LoginActivity: AppCompatActivity() {
             }
         })
 
-        btnRegister.setOnClickListener {
+        loginViewModel.userLoginSuccess.observe(this, Observer { success ->
+            if (success) {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "Error",
+                    Toast.LENGTH_SHORT).show()
+            }
+        })
 
+        btnRegister.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
         }
 
     }

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "704941451871",
+    "project_id": "cibertec-app-2025-jv",
+    "storage_bucket": "cibertec-app-2025-jv.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:704941451871:android:14c6be1361eb86c65c09ea",
+        "android_client_info": {
+          "package_name": "com.cibertec.cibertecapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArnExRG73P94Zmo6ZzmMDyAKTTHhZECXU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

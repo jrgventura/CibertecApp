@@ -6,13 +6,18 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.cibertec.cibertecapp.network.response.LoginResponse
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.launch
 import java.util.regex.Pattern
 
 
 class LoginViewModel: ViewModel() {
 
+    private lateinit var auth: FirebaseAuth
+
     private val repository = LoginRepository()
+
+    val userLoginSuccess = MutableLiveData<Boolean>()
 
     val userLoginError = MutableLiveData<Boolean>()
     private val _client = MutableLiveData<LoginResponse?>()
@@ -29,7 +34,8 @@ class LoginViewModel: ViewModel() {
         } else if (pass.length < 5) {
             userLoginError.value = true
         } else {
-            login(email, pass)
+            // login(email, pass)
+            loginFirebase(email, pass)
         }
     }
 
@@ -49,6 +55,14 @@ class LoginViewModel: ViewModel() {
                 _error.postValue(e.message)
             }
         }
+    }
+
+    private fun loginFirebase(email: String, pass: String) {
+        auth = FirebaseAuth.getInstance()
+        auth.signInWithEmailAndPassword(email, pass)
+            .addOnCompleteListener {
+                userLoginSuccess.value = it.isSuccessful
+            }
     }
 
 
